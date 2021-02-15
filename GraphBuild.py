@@ -24,9 +24,9 @@ def isWithin(event1, event2, radius, alpha=1, beta=1):
 
 def main():
     event = []  # M objects of Event class
-    adMat = numpy.zeroes([M, M], dtype=int)
+    adMat = numpy.zeros([M, M], dtype=int)
     for row in range(len(adMat) - 1):
-        for col in row:
+        for col in adMat[row]:
             if isWithin(event[row], event[col], R):
                 adMat[row][col] = 1
                 adMat[col][row] = 1

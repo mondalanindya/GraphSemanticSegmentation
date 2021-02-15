@@ -1,4 +1,5 @@
 import math
+import numpy
 N = 1000
 M = 10
 R = 5

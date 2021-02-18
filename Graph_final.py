@@ -2,9 +2,10 @@ import numpy as np
 import math
 import scipy.io
 import random
+import networkx
 
 M = 8
-R = 10
+R = 15
 class Event:
     def __init__(self, x, y, t, p):
         self.x = x
@@ -42,7 +43,7 @@ def main():
       else:
         nonzero_polarity_count += 1
         event.append(Event(data['x'][i], data['y'][i], data['ts'][i], data['pol'][i]))
-    print(neg)
+    #print(neg)
     #print('Zeroes', zero_polarity_count)
     #print('Non-zeroes', nonzero_polarity_count)
 
@@ -62,10 +63,9 @@ def main():
             if isWithin(selected_event[row], selected_event[col], R):
                 adMat[row][col] = 1
                 adMat[col][row] = 1
-            else:
-                adMat[row][col] = 0
-                adMat[col][row] = 0
     print('Final\n', adMat)
+    G = networkx.from_numpy_matrix(np.array(adMat))
+    networkx.draw(G, with_labels=True)
         
 if __name__ == "__main__":
     main()

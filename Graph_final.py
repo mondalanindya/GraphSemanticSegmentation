@@ -59,7 +59,7 @@ def main():
         for col in adMat[row]:
             if row == col:
               continue 
-            if isWithin(event[row], event[col], R):
+            if isWithin(selected_event[row], selected_event[col], R):
                 adMat[row][col] = 1
                 adMat[col][row] = 1
             else:

@@ -1,4 +1,7 @@
 # GraphSemanticSegmentation
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
+
 Graph Active Semi-supervised Semantic segmentation for event-based vision 
 
 Semantic segmentation is an important topic in computer vision. The task is to classify every pixel of an image according to what is being represented. Semantic segmentation has several applications in computer vision including autonomous driving, medical image diagnostics, among others. Many researchers have applied successfully Convolutional Neural Networks (CNNs) to the problem of semantic segmentation. However, CNNs are very complex models that require a lot of data to avoid the over-fitting problem. Indeed, there are no general answers in the literature about the sample complexity required in the deep learning regimen. The over-fitting problem is especially sensitive when we do not have a lot of labeled information. For example, the study of event cameras is a promising field in autonomous driving due to several advantages that these devices have over conventional cameras. 
